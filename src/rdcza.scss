@@ -1,0 +1,570 @@
+@import "vars";
+@import "mixins";
+@import "rdcza__keyframes";
+@import "reset";
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 62.5%;
+  @media only screen and (max-device-width: 640px) {
+    font-size: 85%;
+  }
+}
+
+body {
+  background-image: linear-gradient(to bottom, rgba($bg-color-dark - 50, 1), rgba($bg-color-dark,0) 280px, rgba($bg-color-dark,0) 280px), url(../images/bg@2x.png);
+  font-size: $medium-font-size;
+  font-family: $fbody;
+  color: $bright-text-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.36;
+  font-weight: $weight-regular;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: $weight-book;
+  line-height: 1.36;
+}
+
+section {
+  h1 {
+    font-size: $biggest-font-size;
+    margin: 0 auto 6rem;
+  }
+  > p {
+    font-size: $larger-font-size;
+    font-weight: $weight-book;
+    margin-bottom: 4rem;
+  }
+  &.small {
+    h1 {
+      margin: 0 0 2rem;
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+body {
+  > section {
+    padding: 16rem 8rem;
+    &.small {
+      padding: 8rem;
+    }
+  }
+  > section svg,
+  > section img {
+    max-width: 100%;
+  }
+}
+
+@include media(1024) {
+  body > section {
+    padding: 16rem 3rem;
+    &.small {
+      padding: 12 3rem;
+    }
+  }
+}
+
+@media only screen and (max-device-width: 640px) {
+  body > section {
+    padding: 8rem 3rem;
+    &.small {
+      padding: 6rem 3rem;
+    }
+  }
+}
+
+ // GENERAL STUFF
+.full {
+  height: 100%;
+  height: 100vh;
+}
+
+p.small {
+  font-size: $larger-font-size;
+}
+
+ul.flex {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  list-style: none;
+  li {
+    padding: 1rem 3rem 0.5rem;
+    color: inherit;
+    font-size: $larger-font-size;
+    h3 {
+      font-size: $bigger-font-size;
+      font-weight: $weight-regular;
+      margin-bottom: 2rem;
+      em {
+        display: block;
+        font-size: $larger-font-size;
+      }
+    }
+    // li
+    @include media(640) {
+      padding: 1rem 2rem;
+    }
+  }
+
+  //ul
+  &.large {
+    li {
+      font-size: $bigger-font-size;
+      border-radius: 2rem;
+      font-weight: $weight-book;
+      margin: 1.5rem;
+      color: inherit;
+    }
+  }
+}
+
+.links {
+  margin: 3rem 0;
+  a {
+    display: inline-block;
+    padding: 0.6rem 1.1rem 0.4rem;
+    vertical-align: top;
+    margin-bottom: 1rem;
+    border-radius: 2rem;
+    line-height: 1;
+    font-size: $small-font-size;
+    font-weight: $weight-semibold;
+    text-decoration: none;
+    color: inherit;
+    background-color: rgba(white,0.05);
+    transition: background-color 200ms linear;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      background-color: rgba($bright-text-color,0.4);
+    }
+  }
+}
+
+.info {
+  background-color: rgba($bright-text-color, .05);
+  border: 1px solid rgba($bright-text-color, .2);
+  border-radius: 2rem;
+  padding: 2.5rem 5rem;
+  position: relative;
+  list-style: none;
+  margin: 6rem auto 0;
+  font-size: $larger-font-size;
+  max-width: 800px;
+  h3 {
+    font-size: $big-font-size;
+    font-weight: $weight-medium;
+    margin: 1rem 2rem;
+  }
+  // .info
+  .light & {
+    background-color: rgba($bg-color-dark, .1);
+    border: 1px solid rgba($bg-color-dark, .25);
+  }
+}
+
+section.light {
+  background: $bright-text-color;
+  color: $bg-color-dark;
+  box-shadow: inset 0 10px 0 0 rgba($bg-color-dark, .05);
+}
+
+.offset__animation {
+  .csstransitions & {
+    svg {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      [fill*="#F"] {
+        opacity: 0;
+      }
+    }
+    // .usp__feature
+    &.appear {
+      svg {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 0;
+        [stroke*="#"] {
+          transition: all 3s ease-in 400ms;
+        }
+        [fill*="#F"] {
+          opacity: 1;
+          transition: opacity 2s ease 2200ms;
+        }
+      }
+    }
+  }
+}
+
+#language {
+  position: fixed;
+  top: 2rem;
+  right: 3rem;
+  z-index: 11;
+  cursor: pointer;
+  transition: color 100ms ease;
+  color: rgba(white, 0.75);
+  background-color: rgba(black, 0.5);
+  &:hover {
+    color: rgba(white, 0.9);
+  }
+}
+
+// CONTACT
+.contact {
+  min-height: 500px;
+  position: relative;
+  padding: 0;
+}
+
+.contact__mapbox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
+#map-canvas {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.contact__wrapper {
+  z-index: 1;
+  position: relative;
+  background-image: linear-gradient(to bottom, $bg-color-dark, rgba($bg-color-dark,.8));
+  padding: 8rem;
+  min-height: 500px;
+  color: $bright-text-color;
+}
+
+@include media(1024) {
+  .contact__wrapper {
+    padding: 8rem 4rem;
+  }
+}
+
+.contact__form {
+  max-width: 800px;
+  margin: 0 auto 6rem;
+  fieldset {
+    font-size: 0;
+  }
+  .form__error {
+    visibility: hidden;
+    & + input,
+    & + textarea {
+      box-shadow: inset 0 0 0 4px rgba(orange, .95);
+    }
+  }
+  input,
+  textarea,
+  button {
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    padding: 2rem 1.5rem;
+    font-size: $medium-font-size;
+    width: 100%;
+    display: block;
+    border: none;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    box-shadow: inset 0 0 0 0px rgba($bright-text-color, 0);
+    font-family: $fbody;
+    transition: box-shadow 200ms linear, background 200ms ease, color 200ms ease;
+    &.half {
+      width: 49%;
+      min-width: 0;
+      display: inline-block;
+      margin: 0 0 2rem;
+      & ~ div {
+        display: none;
+      }
+      &:nth-of-type(odd) {
+        margin-left: 2%;
+      }
+    }
+    @include media(640) {
+      // font-size: $bigger-font-size;
+      width: 100% !important;
+      margin-left: 0 !important;
+    }
+  }
+  input,
+  textarea {
+    background-color: rgba($bright-text-color,.1);
+    color: $bright-text-color;
+    &:focus {
+      background-color: rgba($bright-text-color,.2);
+      outline: none;
+      box-shadow: inset 0 0 0 4px rgba($bright-text-color, .5);
+    }
+  }
+  textarea {
+    min-height: 150px;
+    resize:vertical;
+    @include media(640) {
+      min-height: 300px;
+    }
+  }
+  button {
+    background-color: $bg-color-dark;
+    color: $bright-text-color;
+    cursor: pointer;
+  }
+}
+
+// FOOTER
+footer {
+  background-color: $bg-color-dark - 30;
+  color: rgba($bright-text-color,.5);
+  padding: 3rem;
+  box-shadow: inset 0 8px 0 0 rgba($bg-color-dark,.25);
+  a {
+    color: $bright-text-color;
+  }
+}
+
+// IMPORTANT RESPONSIVE STYLES
+@media only screen and (max-device-width: 1024px) and (orientation: portrait),
+            screen and (max-device-width: 1024px) and (orientation: landscape) {
+  .intro__logo {
+    width: 600px;
+    height: 155px;
+  }
+  .intro {
+    padding: 100px 2vw;
+  }
+  .intro__header {
+    bottom: 1.5vh;
+  }
+  .intro__header h1 {
+    font-size: 14.2rem;
+  }
+  .intro__header h2 {
+    font-size: 6.2rem;
+  }
+}
+
+@media only screen and (max-device-width: 1024px) and (orientation: portrait) {
+  .intro,
+  .intro__wrapper {
+    max-height: 1866px;
+  }
+}
+
+@media only screen and (max-device-width: 1024px) and (orientation: landscape) {
+  .intro,
+  .intro__wrapper {
+    max-height: 1366px;
+  }
+}
+
+@media only screen and (max-device-width: 767px) and (orientation: portrait),
+            screen and (max-width: 800px) {
+  .intro,
+  .intro__wrapper {
+    max-height: 1046px;
+  }
+  .intro {
+    padding: 30px 2vw;
+  }
+  .intro__logo {
+    width: 500px;
+    height: 155px;
+  }
+  .intro__header {
+    bottom: 90px;
+  }
+  .intro__header h1 {
+    font-size: 5.8rem;
+  }
+  .intro__header h2 {
+    font-size: 2.4rem;
+  }
+  #language {
+    top: 400px;
+    left: 3rem;
+    right: auto;
+    transform-origin: left center;
+    transform: rotate(-90deg);
+  }
+}
+
+@media only screen and (max-device-width: 767px) and (orientation: landscape) {
+  .intro,
+  .intro__wrapper {
+    max-height: 676px;
+  }
+  .intro {
+    padding: 0px 2vw;
+  }
+  .intro__logo {
+    width: 400px;
+    height: 125px;
+  }
+  .intro__header {
+    bottom: 100px;
+  }
+  .intro__header h1 {
+    font-size: 4.8rem;
+  }
+  .intro__header h2 {
+    font-size: 1.8rem;
+  }
+  #language {
+    top: 150px;
+    left: 3rem;
+    right: auto;
+    transform-origin: left center;
+    transform: rotate(-90deg);
+  }
+}
+
+@media only screen and (max-device-width: 767px) and (orientation: landscape),
+       only screen and (max-device-width: 767px) and (orientation: portrait),
+            screen and (max-width: 800px) {
+  section.process {
+    .process__sketch svg {
+      margin-bottom: -50px;
+    }
+    ul {
+      li {
+        width: 100%;
+      }
+    }
+  }
+  section.people {
+    ul {
+      li {
+        width: 100%;
+        margin-bottom: 2rem;
+        p {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+section.intro {
+  padding-top: 30rem;
+  max-width: none;
+}
+
+.intro__header {
+  position: relative;
+  width: 115rem;
+  height: 40rem;
+  margin: 0 auto;
+  text-align: center;
+  h1 {
+    font-size: 16rem;
+    font-weight: $weight-medium;
+    font-family: $fhead;
+    color: mix($ruby, black, 62);
+    text-shadow: 5px 5px 0 $bg-color-dark - 20, 10px 10px 0 $bg-color-dark, 20px 20px 0 rgba(white,.1);
+    transform: rotate(-10deg);
+    position: absolute;
+    margin: 0 auto;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    padding: 0 2rem;
+    &:after {
+      content: "RUBYDCAMP";
+      display: block;
+      color: $ruby;
+      text-shadow: none;
+      position: absolute;
+      top: -0.4rem;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      z-index: 11;
+      padding: 0 2rem;
+      .backgroundcliptext & {
+        color: transparent;
+        -webkit-background-clip: text;
+        background-image: linear-gradient(to bottom, $ruby + 40, $ruby - 40);
+        text-shadow: 0px -5px 0 rgba(255,240,230,.3);
+      }
+    }
+  }
+  h2 {
+    font-size: 12rem;
+    font-weight: $weight-thin;
+    position: absolute;
+    top: 14rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 12;
+    text-align: right;
+    padding-right: 8.6rem;
+    &:before {
+      content: "South Africa";
+      text-transform: uppercase;
+      font-weight: $weight-regular;
+      font-size: 2rem;
+      position: absolute;
+      right: 21rem;
+      top: 6.6rem;
+      opacity: 0.75;
+    }
+  }
+  // .intro__header
+  &:after {
+    float: right;
+    position: absolute;
+    top: 14rem;
+    right: 0;
+    content: "";
+    display: block;
+    background-image: url(../images/sa_map.min.svg);
+    width: 182px;
+    height: 155px;
+    opacity: 0.1;
+  }
+  &:before {
+    position: absolute;
+    top: -20rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    content: "";
+    display: block;
+    background-image: url(../images/ruby_camp.min.svg);
+    width: 443px;
+    height: 242px;
+  }
+  h3 {
+    font-size: 8rem;
+    font-weight: $weight-thin;
+    position: relative;
+    top: 37rem;
+  }
+}
+
+
+section.info {
+  margin: 12rem auto;
+}
