@@ -39,6 +39,20 @@ section {
     font-size: $biggest-font-size;
     margin: 0 auto 6rem;
   }
+  > h2 {
+    color: $light-blue;
+    font-size: 6rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-weight: $weight-thin;
+    img {
+      vertical-align: middle;
+    }
+  }
+  > h3 {
+    font-size: 2.7rem;
+    font-weight: $weight-semibold;
+  }
   > p {
     font-size: $larger-font-size;
     font-weight: $weight-book;
@@ -160,7 +174,7 @@ ul.flex {
   background-color: rgba($bright-text-color, .05);
   border: 1px solid rgba($bright-text-color, .2);
   border-radius: 2rem;
-  padding: 2.5rem 5rem;
+  padding: 5rem;
   position: relative;
   list-style: none;
   margin: 6rem auto 0;
@@ -175,6 +189,9 @@ ul.flex {
   .light & {
     background-color: rgba($bg-color-dark, .1);
     border: 1px solid rgba($bg-color-dark, .25);
+  }
+  p:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -568,4 +585,10 @@ section.intro {
 
 section.info {
   margin: 12rem auto;
+}
+
+// FACTS
+
+section.facts {
+  background-color: rgba(darken($bg-color-dark, 20%), 0.5);
 }

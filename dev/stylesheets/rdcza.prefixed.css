@@ -76,6 +76,20 @@ section h1 {
   font-size: 4.8rem;
   margin: 0 auto 6rem;
 }
+section > h2 {
+  color: #99a4bb;
+  font-size: 6rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  font-weight: 100;
+}
+section > h2 img {
+  vertical-align: middle;
+}
+section > h3 {
+  font-size: 2.7rem;
+  font-weight: 600;
+}
 section > p {
   font-size: 2.1rem;
   font-weight: 300;
@@ -198,7 +212,7 @@ ul.flex.large li {
   background-color: rgba(245, 247, 252, 0.05);
   border: 1px solid rgba(245, 247, 252, 0.2);
   border-radius: 2rem;
-  padding: 2.5rem 5rem;
+  padding: 5rem;
   position: relative;
   list-style: none;
   margin: 6rem auto 0;
@@ -213,6 +227,9 @@ ul.flex.large li {
 .light .info {
   background-color: rgba(41, 55, 88, 0.1);
   border: 1px solid rgba(41, 55, 88, 0.25);
+}
+.info p:last-child {
+  margin-bottom: 0;
 }
 
 section.light {
@@ -612,4 +629,8 @@ section.intro {
 
 section.info {
   margin: 12rem auto;
+}
+
+section.facts {
+  background-color: rgba(9, 12, 18, 0.5);
 }
