@@ -16,7 +16,7 @@ $(document).ready(function() {
   function initialize() {
     var mapOptions = {
       center: new google.maps.LatLng(-25.446876,30.884290),
-      zoom: 14,
+      zoom: 11,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     new google.maps.Map(document.getElementById("map-canvas"),

@@ -39,11 +39,12 @@ section {
     font-size: $biggest-font-size;
     margin: 0 auto 6rem;
   }
-  > h2 {
+  > h2,
+  .contact__wrapper > h1 {
     color: $light-blue;
     font-size: 6rem;
     text-transform: uppercase;
-    margin-bottom: 2rem;
+    margin-bottom: 1.6rem;
     font-weight: $weight-thin;
     img {
       vertical-align: middle;
@@ -56,7 +57,7 @@ section {
   > p {
     font-size: $larger-font-size;
     font-weight: $weight-book;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
   }
   &.small {
     h1 {
@@ -267,7 +268,7 @@ section.light {
 .contact__wrapper {
   z-index: 1;
   position: relative;
-  background-image: linear-gradient(to bottom, $bg-color-dark, rgba($bg-color-dark,.8));
+  background-image: linear-gradient(to bottom, $bg-color-dark - 50, rgba($bg-color-dark,.8));
   box-shadow: inset 0 5px 0 0 $bg-color-dark +10;
   padding: 8rem;
   min-height: 500px;
@@ -277,76 +278,6 @@ section.light {
 @include media(1024) {
   .contact__wrapper {
     padding: 8rem 4rem;
-  }
-}
-
-.contact__form {
-  max-width: 800px;
-  margin: 0 auto 6rem;
-  fieldset {
-    font-size: 0;
-  }
-  .form__error {
-    visibility: hidden;
-    & + input,
-    & + textarea {
-      box-shadow: inset 0 0 0 4px rgba(orange, .95);
-    }
-  }
-  input,
-  textarea,
-  button {
-    -webkit-appearance: none;
-    box-sizing: border-box;
-    padding: 2rem 1.5rem;
-    font-size: $medium-font-size;
-    width: 100%;
-    display: block;
-    border: none;
-    margin-bottom: 2rem;
-    border-radius: 1rem;
-    box-shadow: inset 0 0 0 0px rgba($bright-text-color, 0);
-    font-family: $fbody;
-    transition: box-shadow 200ms linear, background 200ms ease, color 200ms ease;
-    &.half {
-      width: 49%;
-      min-width: 0;
-      display: inline-block;
-      margin: 0 0 2rem;
-      & ~ div {
-        display: none;
-      }
-      &:nth-of-type(odd) {
-        margin-left: 2%;
-      }
-    }
-    @include media(640) {
-      // font-size: $bigger-font-size;
-      width: 100% !important;
-      margin-left: 0 !important;
-    }
-  }
-  input,
-  textarea {
-    background-color: rgba($bright-text-color,.1);
-    color: $bright-text-color;
-    &:focus {
-      background-color: rgba($bright-text-color,.2);
-      outline: none;
-      box-shadow: inset 0 0 0 4px rgba($bright-text-color, .5);
-    }
-  }
-  textarea {
-    min-height: 150px;
-    resize:vertical;
-    @include media(640) {
-      min-height: 300px;
-    }
-  }
-  button {
-    background-color: $bg-color-dark;
-    color: $bright-text-color;
-    cursor: pointer;
   }
 }
 
@@ -361,127 +292,8 @@ footer {
   }
 }
 
-// IMPORTANT RESPONSIVE STYLES
-@media only screen and (max-device-width: 1024px) and (orientation: portrait),
-            screen and (max-device-width: 1024px) and (orientation: landscape) {
-  .intro__logo {
-    width: 600px;
-    height: 155px;
-  }
-  .intro {
-    padding: 100px 2vw;
-  }
-  .intro__header {
-    bottom: 1.5vh;
-  }
-  .intro__header h1 {
-    font-size: 14.2rem;
-  }
-  .intro__header h2 {
-    font-size: 6.2rem;
-  }
-}
 
-@media only screen and (max-device-width: 1024px) and (orientation: portrait) {
-  .intro,
-  .intro__wrapper {
-    max-height: 1866px;
-  }
-}
-
-@media only screen and (max-device-width: 1024px) and (orientation: landscape) {
-  .intro,
-  .intro__wrapper {
-    max-height: 1366px;
-  }
-}
-
-@media only screen and (max-device-width: 767px) and (orientation: portrait),
-            screen and (max-width: 800px) {
-  .intro,
-  .intro__wrapper {
-    max-height: 1046px;
-  }
-  .intro {
-    padding: 30px 2vw;
-  }
-  .intro__logo {
-    width: 500px;
-    height: 155px;
-  }
-  .intro__header {
-    bottom: 90px;
-  }
-  .intro__header h1 {
-    font-size: 5.8rem;
-  }
-  .intro__header h2 {
-    font-size: 2.4rem;
-  }
-  #language {
-    top: 400px;
-    left: 3rem;
-    right: auto;
-    transform-origin: left center;
-    transform: rotate(-90deg);
-  }
-}
-
-@media only screen and (max-device-width: 767px) and (orientation: landscape) {
-  .intro,
-  .intro__wrapper {
-    max-height: 676px;
-  }
-  .intro {
-    padding: 0px 2vw;
-  }
-  .intro__logo {
-    width: 400px;
-    height: 125px;
-  }
-  .intro__header {
-    bottom: 100px;
-  }
-  .intro__header h1 {
-    font-size: 4.8rem;
-  }
-  .intro__header h2 {
-    font-size: 1.8rem;
-  }
-  #language {
-    top: 150px;
-    left: 3rem;
-    right: auto;
-    transform-origin: left center;
-    transform: rotate(-90deg);
-  }
-}
-
-@media only screen and (max-device-width: 767px) and (orientation: landscape),
-       only screen and (max-device-width: 767px) and (orientation: portrait),
-            screen and (max-width: 800px) {
-  section.process {
-    .process__sketch svg {
-      margin-bottom: -50px;
-    }
-    ul {
-      li {
-        width: 100%;
-      }
-    }
-  }
-  section.people {
-    ul {
-      li {
-        width: 100%;
-        margin-bottom: 2rem;
-        p {
-          padding: 0;
-        }
-      }
-    }
-  }
-}
+// INTRO
 
 section.intro {
   padding-top: 30rem;
@@ -588,7 +400,37 @@ section.info {
 }
 
 // FACTS
-
 section.facts {
   background-color: rgba(darken($bg-color-dark, 20%), 0.5);
+}
+
+
+// SCHEDULE
+section.schedule {
+  .flex {
+    li {
+      width: 22.5%;
+      margin: 1.25%;
+      padding: 2rem 3rem 3rem;
+      font-size: 1.8rem;
+      h3 {
+        color: $light-blue +50;
+      }
+      em {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: $weight-semibold;
+        color: $bright-text-color;
+        &:before,
+        &:after {
+          content: ' – ';
+          opacity: 0.25;
+        }
+      }
+      p {
+        margin-bottom: 1rem;
+        color: $light-blue;
+      }
+    }
+  }
 }

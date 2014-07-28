@@ -38,30 +38,40 @@
         <img alt='Schedule' src='images/schedule.min.svg'>
         Schedule
       </h2>
-      <h3>Thursday</h3>
-      <p>afternoon - eveningcamp opens for early arrivals. Food will be provided. Just be sure to check the "Thursday night" box in the registration form.</p>
-      <h3>Friday (Code Retreat)</h3>
-      <p>8:00ambreakfast</p>
-      <p>9:00amwelcome</p>
-      <p>9:05am three 45 minute pairing sessions on the Game of Life</p>
-      <p>~noonlunch</p>
-      <p>1:30pm three 45 minute pairing sessions on the Game of Life</p>
-      <p>5pmretreat adjourns</p>
-      <p>~5:30pmdinner</p>
-      <p>later looks like I picked the wrong week to quit drinking</p>
-      <h3>Saturday and Sunday (Open Space Event)</h3>
-      <p>8:00ambreakfast</p>
-      <p>9:00amEvan welcoming speech</p>
-      <p>9:05amgroup brainstorming</p>
-      <p>9:30amgroup planning session</p>
-      <p>10amOpen Space sessions begin</p>
-      <p>~noonlunch (often coincides with sessions)</p>
-      <p>1pmmore sessions</p>
-      <p>6pmgroup daily debrief</p>
-      <p>6:15pmdinner</p>
-      <p>later looks like I picked the wrong week to quit sniffing glue</p>
-      <h3>Monday</h3>
-      <p>morningCamp available for late departures</p>
+      <ul class='flex'>
+        <li class='info'>
+          <h3>Thu</h3>
+          <p><em>afternoon</em> Eveningcamp opens for early arrivals. Food will be provided. Just be sure to check the "Thursday night" box in the registration form.</p>
+        </li>
+        <li class='info'>
+          <h3>Fri</h3>
+          <p><em>8:00am</em> Breakfast</p>
+          <p><em>9:00am</em> Welcome</p>
+          <p><em>9:05am</em> Three 45 minute pairing sessions on the Game of Life</p>
+          <p><em>~noon</em> Lunch</p>
+          <p><em>1:30pm</em> Three 45 minute pairing sessions on the Game of Life</p>
+          <p><em>5pm</em> retreat adjourns</p>
+          <p><em>~5:30pm</em> Dinner</p>
+          <p><em>later</em> looks like I picked the wrong week to quit drinking</p>
+        </li>
+        <li class='info'>
+          <h3>Sat + Sun</h3>
+          <p><em>8:00am</em> Breakfast</p>
+          <p><em>9:00am</em> Evan welcoming speech</p>
+          <p><em>9:05am</em> Group brainstorming</p>
+          <p><em>9:30am</em> Group planning session</p>
+          <p><em>10am</em> Open Space sessions begin</p>
+          <p><em>~noon</em> Lunch (often coincides with sessions)</p>
+          <p><em>1pm</em> More sessions</p>
+          <p><em>6pm</em> Group daily debrief</p>
+          <p><em>6:15pm</em> Dinner</p>
+          <p><em>later</em> Looks like I picked the wrong week to quit sniffing glue</p>
+        </li>
+        <li class='info'>
+          <h3>Mon</h3>
+          <p><em>morning</em> Camp available for late departures</p>
+        </li>
+      </ul>
     </section>
     <?php include('_bottom.php') ?>
   </body>
