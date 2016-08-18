@@ -21,7 +21,7 @@
         <img alt='Time' src='images/time.min.svg'>
         When
       </h2>
-      <p>September 11th - 15th 2014.</p>
+      <p>September 10th - 14th 2015.</p>
       <h2>
         <img alt='Where' src='images/where.min.svg'>
         Where
@@ -31,7 +31,7 @@
         <img alt='What' src='images/what.min.svg'>
         What
       </h2>
-      <p>Friday is a code retreat, Saturday & Sunday are Open Spaces.</p>
+      <p>We're still deciding about Friday, but Saturday & Sunday are Open Spaces.</p>
     </section>
     <section class='schedule'>
       <h2>
@@ -41,23 +41,22 @@
       <ul class='flex'>
         <li class='info'>
           <h3>Thu</h3>
-          <p><em>afternoon</em> Eveningcamp opens for early arrivals. Food will be provided. Just be sure to check the "Thursday night" box in the registration form.</p>
+          <p><em>evening</em> Camp opens for early arrivals. Food will be provided. Just be sure to check the "Thursday night" box in the registration form.</p>
         </li>
         <li class='info'>
           <h3>Fri</h3>
           <p><em>8:00am</em> Breakfast</p>
           <p><em>9:00am</em> Welcome</p>
-          <p><em>9:05am</em> Three 45 minute pairing sessions on the Game of Life</p>
+          <p><em>9:05am</em> TBC</p>
           <p><em>~noon</em> Lunch</p>
-          <p><em>1:30pm</em> Three 45 minute pairing sessions on the Game of Life</p>
-          <p><em>5pm</em> retreat adjourns</p>
+          <p><em>1:30pm</em> TBC</p>
+          <p><em>5pm</em> Retreat adjourns</p>
           <p><em>~5:30pm</em> Dinner</p>
-          <p><em>later</em> looks like I picked the wrong week to quit drinking</p>
         </li>
         <li class='info'>
           <h3>Sat + Sun</h3>
           <p><em>8:00am</em> Breakfast</p>
-          <p><em>9:00am</em> Evan welcoming speech</p>
+          <p><em>9:00am</em> Hannes welcoming speech</p>
           <p><em>9:05am</em> Group brainstorming</p>
           <p><em>9:30am</em> Group planning session</p>
           <p><em>10am</em> Open Space sessions begin</p>
@@ -65,11 +64,10 @@
           <p><em>1pm</em> More sessions</p>
           <p><em>6pm</em> Group daily debrief</p>
           <p><em>6:15pm</em> Dinner</p>
-          <p><em>later</em> Looks like I picked the wrong week to quit sniffing glue</p>
         </li>
         <li class='info'>
           <h3>Mon</h3>
-          <p><em>morning</em> Camp available for late departures</p>
+          <p><em>morning</em> We enjoy the last of the spoils before the bus heads back to Jozi</p>
         </li>
       </ul>
     </section>
