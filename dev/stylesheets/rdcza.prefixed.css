@@ -74,7 +74,7 @@ section h1 {
 }
 section > h2,
 section .contact__wrapper > h1 {
-  color: #99a4bb;
+  color: #99A4BB;
   font-size: 6rem;
   text-transform: uppercase;
   margin-bottom: 1.6rem;
@@ -262,7 +262,7 @@ section.intro {
   font-size: 16rem;
   font-weight: 500;
   font-family: "uppercut-angle";
-  color: #7e201b;
+  color: #7e201c;
   text-shadow: 5px 5px 0 #152344, 10px 10px 0 #293758, 20px 20px 0 rgba(255, 255, 255, 0.1);
   -webkit-transform: rotate(-10deg);
   -ms-transform: rotate(-10deg);
@@ -277,7 +277,7 @@ section.intro {
 .intro__header h1:after {
   content: "RUBYDCAMP";
   display: block;
-  color: #cc342d;
+  color: #CC342D;
   text-shadow: none;
   position: absolute;
   top: -0.4rem;
@@ -375,7 +375,7 @@ section.schedule .flex li em:before, section.schedule .flex li em:after {
 }
 section.schedule .flex li p {
   margin-bottom: 1rem;
-  color: #99a4bb;
+  color: #99A4BB;
 }
 
 @media screen and (max-width: 1360px) {
@@ -472,3 +472,5 @@ section.schedule .flex li p {
     font-size: 3.2rem;
   }
 }
+
+/*# sourceMappingURL=rdcza.prefixed.css.map */

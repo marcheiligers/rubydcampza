@@ -21,7 +21,7 @@
         <img alt='Time' src='images/time.min.svg'>
         When
       </h2>
-      <p>September 10th - 14th 2015.</p>
+      <p>September 2nd - 4th 2016.</p>
       <h2>
         <img alt='Where' src='images/where.min.svg'>
         Where
@@ -31,7 +31,7 @@
         <img alt='What' src='images/what.min.svg'>
         What
       </h2>
-      <p>We're still deciding about Friday, but Saturday & Sunday are Open Spaces.</p>
+      <p>Friday will consist of Mob programming sessions, Ruby Koans & helping Ruby n00bs learn just how awesome Ruby is. Saturday & Sunday will be filled with mindblowing programming discussions!</p>
     </section>
     <section class='schedule'>
       <h2>
@@ -54,7 +54,7 @@
           <p><em>~5:30pm</em> Dinner</p>
         </li>
         <li class='info'>
-          <h3>Sat + Sun</h3>
+          <h3>Sat</h3>
           <p><em>8:00am</em> Breakfast</p>
           <p><em>9:00am</em> Hannes welcoming speech</p>
           <p><em>9:05am</em> Group brainstorming</p>
@@ -66,8 +66,13 @@
           <p><em>6:15pm</em> Dinner</p>
         </li>
         <li class='info'>
-          <h3>Mon</h3>
-          <p><em>morning</em> We enjoy the last of the spoils before the bus heads back to Jozi</p>
+          <h3>Sun</h3>
+          <p><em>8:00am</em> Breakfast</p>
+          <p><em>9:00am</em> Hannes welcoming speech</p>
+          <p><em>9:05am</em> Group brainstorming</p>
+          <p><em>9:30am</em> Group planning session</p>
+          <p><em>10am</em> Open Space sessions begin</p>
+          <p><em>~noon</em> We enjoy the last of the spoils before the bus heads back to Jozi</p>
         </li>
       </ul>
     </section>
